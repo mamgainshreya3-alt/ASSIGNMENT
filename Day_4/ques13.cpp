@@ -1,23 +1,14 @@
-#include<stdio.h>
-int fib(int);
+#include <stdio.h>
 int main(){
-    int i,n;
-    printf("Enter the number of terms to be printed");
+    int n, f1 = 0, f2 = 1, f3;
+    printf("Enter number of terms: ");
     scanf("%d", &n);
-    printf("Fibonacci series: ");
-    for(i=0; i<=n-1; i++){
-        printf("%d ", fib(i));
+    printf("Fibonacci Series:\n");
+    for(int i = 1; i <= n; i++){
+        printf("%d ", f1);
+        f3 = f1 + f2;
+        f1 = f2;
+        f2 = f3;
     }
     return 0;
-}
-int fib(int i){
-    if(i == 0){
-        return 0;
-    }
-    else if(i == 1){
-        return 1;
-    }
-    else{
-        return fib(i-1) + fib(i-2);
-    }
 }

@@ -6,13 +6,13 @@ int fibonacci(int n){
     if(n == 1){
         return 1;
     }
-    int a = 0, b = 1, c;
+    int f1 = 0, f2 = 1, f3;
     for(int i = 2; i <= n; i++){
-        c = a + b;
-        a = b;
-        b = c;
+        f3 = f1 + f2;
+        f1 = f2;
+        f2 = f3;
     }
-    return b;
+    return f2;
 }
 
 int main(){
